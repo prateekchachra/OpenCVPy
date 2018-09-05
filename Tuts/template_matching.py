@@ -12,7 +12,7 @@ img_rgb = cv2.imread('opencv-template-matching-python-tutorial.jpg')
 img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
 
 template = cv2.imread('opencv-template-for-matching.jpg',0)
-w, h = template.shape[::-1]
+w, h = template.shape
 
 res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
 threshold = 0.8
